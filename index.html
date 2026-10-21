@@ -333,6 +333,31 @@
     .grid-3 { grid-template-columns: 1fr; }
     .grid-4 { grid-template-columns: 1fr 1fr; }
   }
+
+  .cleared { background: #fffdf8; border: 1px solid #e3dccf; border-radius: 16px; padding: 16px; margin: 8px 0; }
+  .cleared .c-head { font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 1.05rem; color: #4f8170; margin: 0 0 4px; }
+  .cleared p { margin: 0 0 8px; font-size: .88rem; line-height: 1.7; }
+  .cleared .top { display:flex; gap:14px; align-items:center; margin-bottom:10px; }
+  .cleared .top a { flex:0 0 38%; max-width:150px; display:block; }
+  .cleared .cert { display:block; width:100%; height:auto; border:1px solid #e3dccf; border-radius:3px; box-shadow:0 3px 10px rgba(60,48,40,.18); }
+  .cleared .top p { margin:0; }
+  .cleared .zoom { display:block; font-size:.7rem; color:#8a7a6a; margin-top:6px; }
+  .cleared ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .cleared li { padding: 6px 10px; background: #eef3ee; border-radius: 8px; font-size: .8rem; line-height: 1.5; }
+  .cleared li b { color: #4f8170; display: block; font-size: .7rem; letter-spacing: .08em; }
+  .cleared li b::after { content: 'ヶ月目'; }
+  .cert-lb { position:fixed; inset:0; z-index:9999; background:rgba(30,25,20,.82); display:none; align-items:center; justify-content:center; padding:16px; cursor:zoom-out; }
+  .cert-lb.on { display:flex; }
+  .cert-lb img { max-width:100%; max-height:100%; width:auto; height:auto; border-radius:4px; box-shadow:0 6px 30px rgba(0,0,0,.5); }
+  .cert-lb span { position:absolute; top:12px; right:16px; color:#fff; font-size:1.8rem; line-height:1; }
+  .make-sub { margin: -10px 0 14px; font-size: .92rem; color: var(--text-mid, #6b5a4a); }
+  .make-wrap { display: flex; flex-direction: column; gap: 14px; }
+  .make-photo { display:block; width:100%; height:auto; aspect-ratio: 16 / 10; object-fit:cover; object-position:60% 50%; border-radius:12px; box-shadow:0 3px 10px rgba(60,48,40,.15); }
+  @media (min-width: 641px) {
+    .make-wrap { flex-direction: row-reverse; align-items: flex-start; gap: 22px; }
+    .make-wrap .steps { flex: 1; min-width: 0; }
+    .make-photo { flex: 0 0 320px; width: 320px; height: auto; aspect-ratio: 4 / 3; object-position: center; }
+  }
 </style>
 </head>
 <body>
@@ -368,7 +393,7 @@
       <div class="shift-title">暮らしを整える時間を最優先に。日々の心地よさを見つめ直すフェーズ。</div>
       <div class="role-box">
         <div class="role-title">現在の役割</div>
-        <div class="role-item">・中1男子、小学2年女子の母（2026年3月現在）</div>
+        <div class="role-item">・中学生男子・小学生女子の母</div>
         <div class="role-item">・単身赴任中の夫と、家族の基盤を整える</div>
       </div>
     </div>
@@ -479,13 +504,56 @@
     </div>
   </div>
 
+  <div class="section-label"><span class="section-label-text--mincho">AIスクールの修了と、取組んだ課題</span></div>
+
+  <div class="cleared">
+    <p class="c-head">AI-Driven School 修了</p>
+    <div class="top">
+      <a href="images/certificate-large.webp" target="_blank" rel="noopener"><img class="cert" src="images/certificate.webp" alt="AI-Driven School 修了証" width="360" height="509"></a>
+      <div><p>半年間の全課程を修了。卒業制作を含むすべての課題を提出し、修了証をいただきました。</p><span class="zoom">修了証をタップすると拡大します</span></div>
+    </div>
+    <ul>
+      <li><b>1</b>パーソナル図解スキル</li>
+      <li><b>2</b>面倒な報告を自動化するツール</li>
+      <li><b>3</b>ひな形を自分の画面に仕上げる</li>
+      <li><b>4</b>自分の画面に記憶を持たせる</li>
+      <li><b>5</b>自分専用の提案スキルを作る</li>
+      <li><b>6</b>卒業制作</li>
+    </ul>
+  </div>
+
+  <div class="section-label"><span class="section-label-text--mincho">暮らしの中のものづくり</span></div>
+
+  <p class="make-sub">アプリやページは、わたしからこんな感じで生まれています。</p>
+
+  <div class="make-wrap">
+    <img class="make-photo" src="images/making.webp" alt="カフェのラウンジで、パソコンに向かうみな子" width="1000" height="750">
+    <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h3>暮らしの「困った」から始める</h3><p>子育てや家事、趣味の中の、小さな困りごとを見つけます。</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h3>AIと話しながら形にする</h3><p>Claudeに相談しながら、アプリや文章、デザインを一緒につくります。</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h3>使ってみて、直す</h3><p>家族や身近な人に使ってもらい、少しずつ磨いていきます。</p></div></div>
+  </div>
+  </div>
+
   <div class="cta-wrap">
     <div class="cta-main">今の心地よい暮らしを土台に。</div>
     <div class="cta-sub">皆さまと一緒に学び、成長して新しい自分になること。それが今の目標です。</div>
     <div class="cta-btn">一緒に学びましょう</div>
     <p class="cta-note">知らなかったことが、できるようになる。その瞬間がたまらなく好きです。AI Driven Schoolの仲間と一緒に、これからも新しい扉を開いていきたいと思っています。</p>
+    <p class="cta-note">暮らしの中のAIについて、気軽に話しかけてもらえたらうれしいです。</p>
   </div>
 
 </div>
+
+<div class="cert-lb" id="certLb" role="dialog" aria-label="修了証の拡大"><span aria-hidden="true">×</span><img src="images/certificate-large.webp" alt="AI-Driven School 修了証（拡大）"></div>
+<script>
+(function(){
+  var lb=document.getElementById('certLb'), a=document.querySelector('.cleared .top a');
+  if(!lb||!a) return;
+  a.addEventListener('click',function(e){ e.preventDefault(); lb.classList.add('on'); });
+  lb.addEventListener('click',function(){ lb.classList.remove('on'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') lb.classList.remove('on'); });
+})();
+</script>
 </body>
 </html>
